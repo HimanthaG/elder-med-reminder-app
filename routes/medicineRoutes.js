@@ -5,12 +5,19 @@ const router = express.Router();
 const {
   addMedicine,
   getMedicines,
+  getMedicineById,
+  updateMedicine,
+  deleteMedicine,
 } = require("../controllers/medicineController");
 
-// Add medicine
 router.post("/", addMedicine);
 
-// Get all medicines
 router.get("/", getMedicines);
+
+router.get("/:id", getMedicineById);
+
+router.put("/:id", updateMedicine);
+
+router.delete("/:id", deleteMedicine);
 
 module.exports = router;
