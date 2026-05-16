@@ -26,15 +26,6 @@ const getMedicines = async (req, res) => {
   }
 };
 
-module.exports = {
-  addMedicine,
-  getMedicines,
-  getMedicineById,
-  updateMedicine,
-  deleteMedicine,
-};
-
-
 // Get Single Medicine
 const getMedicineById = async (req, res) => {
   try {
@@ -78,4 +69,12 @@ const deleteMedicine = async (req, res) => {
       message: error.message,
     });
   }
+};
+
+module.exports = {
+  addMedicine,
+  getMedicines,
+  getMedicineById,
+  updateMedicine,
+  deleteMedicine,
 };
